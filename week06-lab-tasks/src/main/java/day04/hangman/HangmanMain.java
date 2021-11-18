@@ -22,8 +22,12 @@ public class HangmanMain {
             System.out.println("Mi a következő tipped?");
 
             String guess = sc.nextLine();
-            wordFound = updateWordFound(wordToFind,wordFound,guess);
-            chances--;
+            if (wordToFind.contains(guess)) {
+                wordFound = updateWordFound(wordToFind,wordFound,guess);
+            } else{
+                chances--;
+            }
+
         } while (chances>0 && !wordFound.equals(wordToFind));
 
         if (wordFound.equals(wordToFind)){
