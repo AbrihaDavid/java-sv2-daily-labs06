@@ -13,7 +13,8 @@ public class HangmanMain {
         Scanner sc = new Scanner(System.in);
 
         String wordToFind = "almafa";
-        String wordFound = "______";
+        String wordFound = "_".repeat(wordToFind.length());
+
         int chances = 8;
 
         do {
